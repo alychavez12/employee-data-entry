@@ -5,7 +5,18 @@
 
 <body>
     <h1>show page</h1>
-    
+    <nav>
+        <a href="/employees">Back to list</a>
+    </nav>
+    <h1><%= employee.firstname %> <%= employee.lastname %></h1>
+     
+    D.O.B: <%= employee.dob %>
+    Gender: <%= employee.gender%>
+    Address: <%= employee.address%>
+    Post-Code: <%= employee.postcode%>
+    Phone Number: <%= employee.phonenumber%>
+    Email Address: <%= employee.emailaddress%>
+    Position: <%= employee.position%>
 <%- include('./partials/footer') %>
 </body>
 </html>
