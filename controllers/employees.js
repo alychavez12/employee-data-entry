@@ -44,6 +44,7 @@ router.post('/employees', (req, res) => {
 router.get('/employees/:id', (req, res) => {
     Employee.findById(req.params.id, (err, foundEmployee) => {
         res.render('show.ejs', {
+            employee: foundEmployee,
             title: 'show page'
         });
 
