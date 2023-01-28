@@ -5,7 +5,20 @@
 
 <body>
     <h1>edit page</h1>
-    
+    <form action="/employees/<%=employee._id%>"?_method="PUT" method="POST">
+        <label>
+            Id Number: <input type="number" name="idnumber" value="<%=employee.idnumber%>">
+            First Name: <input type="text" name="firstname" value="<%=employee.firstname%>">
+            Last Name: <input type="text" name="lastname" value="<%=employee.lastname%>">
+            D.O.B: <input type="text" name="dob" value="<%=employee.dob%>">
+            Gender: <input type="text" name="gender" value="<%=employee.gender%>">
+            Post Code: <input type="text" name="postcode" value="<%=employee.postcode%>">
+            Phone Number: <input type="text" name="phonenumber" value="<%=employee.phonenumber%>">
+            Email address: <input type="text" name="emailaddress" value="<%=employee.emailaddress%>">
+            Position: <input type="text" name="position" value="<%=employee.position%>">
+        </label>
+        <input type="submit" name="" value="Submit Changes">
+    </form>
 <%- include('./partials/footer') %>
 </body>
 </html>
