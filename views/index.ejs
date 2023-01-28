@@ -5,7 +5,23 @@
 
 <body>
     <h1>index page</h1>
+    <nav>
+        <a href="/employees/new">add a new employee</a>
+    </nav>
+    <ul>
+        <% employees.forEach(employee => { %>
+        <li>
+            <a href="/employees/<%= employee._id %>">
+            <%= employee.firstname %>
+            <%= employee.lastname %>
+      </a>  
+    </li>
+        <%  }); %>
+    </ul>
+
     
-<%- include('./partials/footer') %>
+
+    <%- include('./partials/footer') %>
 </body>
+
 </html>
