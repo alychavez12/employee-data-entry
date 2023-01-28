@@ -5,7 +5,20 @@
 
 <body>
     <h1>new page</h1>
-    
+    <form action="/employee" method="POST" autocomplete="off">
+        <label>
+            Id Number: <input type="number" name="idnumber">
+            First Name: <input type="text" name="firstname">
+            Last Name: <input type="text" name="lastname">
+            D.O.B: <input type="text" name="dob">
+            Gender: <input type="text" name="gender">
+            Post Code: <input type="text" name="postcode">
+            Email address: <input type="text" name="emailaddress">
+            Phone Number: <input type="text" name="phonenumber">
+            Position: <input type="text" name="position">
+        </label>
+        <input type="submit" name="" value="submit">
+    </form>
 <%- include('./partials/footer') %>
 </body>
 </html>
