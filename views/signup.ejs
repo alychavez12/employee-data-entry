@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <%- include('./partials/head') %>
+    <%- include('./partials/nav') %>
+</head>
+
+<body>
+    <h1>Welcome to Employee Data Entry</h1>
+
+    <h2 class="signup-h2"> Trusted by Industry Leaders</h2>
+
+    <div class="form-signup">
+
+        <% if(error) {%>
+        <p class="signup-error"><%= error %></p>
+        <% } %>
+        <form action="/signup" method="POST">
+            <label>
+                Email:
+                <input type="email" name="email" class="input-sigup" required>
+            </label>
+            <label>
+                Password:
+                <input type="password" name="password" class="input-sigup" required>
+            </label>
+            <label>
+                Password Confirmation:
+                <input type="password" name="passwordConf" class="input-sigup" required>
+            </label>
+            <input type="submit" value="Submit" class="submit-signup">
+        </form>
+    </div>
+    <%- include('./partials/head') %>
+</body>
+
+</html>
