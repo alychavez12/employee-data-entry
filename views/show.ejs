@@ -19,6 +19,10 @@
     Position: <%= employee.position%>
 
     <a href="/employees/<%=employee._id %>/edit">Edit</a>
-<%- include('./partials/footer') %>
+    <form action="/employees/<%=employee._id %>/?_method=DELETE" method="POST">
+    <input type="submit" value="Delete">
+    </form>
+
+    <%- include('./partials/footer') %>
 </body>
 </html>
