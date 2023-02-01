@@ -1,10 +1,8 @@
 const express = require('express');
 const router = express.Router();
-// const data = require('../data');
-const employeeRouter = require('../models/employees');
 const Employee = require('../models/employees');
 const data = require('../data');
-const employees = require('../models/employees');
+
 // routes INDUCES
 
 // Seed Route
@@ -36,6 +34,18 @@ router.get('/employees/new', (req, res) => {
 // Delete
 
 // Update
+router.put('/employees/:id', (req, res) => {
+    Employee.findByIdAndUpdate(
+        req.params.id,
+        req.body,
+        {
+            new: true,
+        },
+        (err, updateEmployee) => {
+            res.redirect(`/employees`)
+        }
+    );
+});
 
 // Create
 router.post('/employees', (req, res) => {
