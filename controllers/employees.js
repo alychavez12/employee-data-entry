@@ -32,6 +32,11 @@ router.get('/employees/new', (req, res) => {
 });
 
 // Delete
+router.delete('/employees/:id', (req, res) => {
+    Employee.findByIdAndDelete(req.params.id, (err, data) => {
+        res.redirect('/employees');
+    });
+});
 
 // Update
 router.put('/employees/:id', (req, res) => {
