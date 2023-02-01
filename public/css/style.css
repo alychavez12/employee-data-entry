@@ -1,3 +1,12 @@
+/* general */
+body {
+    font-family: 'Montserrat', sans-serif;
+    letter-spacing: 0.5px;
+}
+
+h1 {
+    text-align: center;
+}
 /* Nav-Bar */
 
 .nav-ul {
@@ -24,6 +33,131 @@
 
 .nav-list .li-a:hover {
     background-color: #111;
+
+}
+/* Sign up page */
+.signup {
+  
+    display:inline;
+
+}
+.form-signup {
+    max-width: 100%;
+    background: #f6f9ff;
+    border-radius: 8px;
+    box-shadow: opx 15px 30px -20px rgb(0 0 0 /60%);
+    color: #507790;
+    display:block;
+    padding: 10rem;
+    text-align: center;
+    align-content: center;
+     
+}
+
+.input-sigup {
+    padding: 12px 10px;
+    letter-spacing: 1rem;
+    font-size: 1rem;
+    font-weight: 500;
+    border-radius: 8px;
+    height: auto;
+    margin-bottom: 20px;
+    margin-top: 2px;
+    margin-right: 20px;
+}
+
+.submit-signup {
+    display: inline-block;
+    font-size: 1rem;
+    margin: 0 16px 0 0;
+    width: auto;
+    line-height: 1;
+    min-height: unset;
+    background-color: #D4713D;
+    min-width: 180px;
+    padding: 18px 36px;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+    color: #fff;
+    text-align: center;
+    border-radius: 100px;
+    font-size: Helvetica;
+    cursor: pointer;
+}
+
+.signup-h2 {
+    display: block;
+    margin-block-start: 0.83em;
+    margin-block-end: 0.85rem;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+    font-weight: bold;
+    color: #D4713D;
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+    padding-left: 10rem;
+
+}
+
+/* login */
+
+.form-login {
+    
+    max-width: 100%;
+    background: #f6f9ff;
+    border-radius: 8px;
+    box-shadow: opx 15px 30px -20px rgb(0 0 0 /60%);
+    color: #507790;
+    display:block;
+    padding: 10rem;
+    text-align: center;
+    align-content: center;
+   
+    
+}
+
+.input-login {
+    padding: 12px 10px;
+    font-size: 1rem;
+    letter-spacing: 1px;
+    font-weight: 500;
+    border-radius: 8px;
+    height: auto;
+    margin-bottom: 20px;
+    margin-top: 2px;
+    
+}
+
+.submit-login {
+    display: inline-block;
+    font-size: 1rem;
+    margin: 0 16px 0 0;
+    width: auto;
+    line-height: 1;
+    min-height: unset;
+    background-color: #D4713D;
+    min-width: 180px;
+    padding: 18px 36px;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+    color: #fff;
+    text-align: center;
+    border-radius: 100px;
+    font-size: Helvetica;
+    cursor: pointer;
+}
+
+.signup-h2 {
+    display: block;
+    margin-block-start: 0.83em;
+    margin-block-end: 0.85rem;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+    font-weight: bold;
+    color: #D4713D;
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+    padding-left: 10rem;
 
 }
 
