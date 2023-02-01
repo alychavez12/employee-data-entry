@@ -2,10 +2,10 @@
 <html lang="en">
 
 <%- include('./partials/head') %>
-
+<%- include('./partials/nav') %>
 <body>
-    <h1>edit page</h1>
-    <form action="/employees/<%=employee._id%>"?_method="PUT" method="POST">
+    <h1>Edit page</h1>
+    <form action="/employees/<%=employee._id%>?_method=PUT" method="POST">
         <label>
             Id Number: <input type="number" name="idnumber" value="<%=employee.idnumber%>">
             First Name: <input type="text" name="firstname" value="<%=employee.firstname%>">

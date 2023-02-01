@@ -2,12 +2,11 @@
 <html lang="en">
 
 <%- include('./partials/head') %>
-
+<%- include('./partials/nav') %>
 <body>
-    <h1>index page</h1>
-    <nav>
-        <a href="/employees/new">add a new employee</a>
-    </nav>
+
+    <h1>Employee list</h1>
+   
     <ul>
         <% employees.forEach(employee => { %>
         <li>
