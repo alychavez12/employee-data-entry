@@ -14,6 +14,13 @@ router.get('/employees/seed', (req, res) => {
     });
 });
 
+// home page route
+router.get('/', (req, res) => {
+    res.render('home.ejs', {
+        title: 'main page'
+    });
+});
+
 // Index
 router.get('/employees', (req, res) => {
     Employee.find({}, (err, allEmployees) => {
