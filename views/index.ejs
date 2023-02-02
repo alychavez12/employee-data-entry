@@ -10,13 +10,25 @@
     <%- include('./partials/nav') %>
     <h1>Employee Data Base</h1>
 
+    <!--the list of names in alphabetic order-->
+    <% employees.sort(function (a, b) { %>
+    <% if (a.firstname < b.firstname) { %>
+    <% return -1;%>
+    <% } %>
+    <% if (a.firstname > b.firstname) { %>
+    <%return 1;%>
+    <% } %>
+    <%return 0;%>
+    <%});%>
+
     <ul>
         <% employees.forEach(employee => { %>
         <li class="employee-list">
-            <a href="/employees/<%= employee._id %>">
+            <a href="/employees/<%= employee._id %> " class="employee-list">
                 <%= employee.idnumber %> -
                 <%= employee.firstname %>
-                <%= employee.lastname %>
+                <%= employee.lastname %> -
+                <%= employee.position %>
             </a>
         </li>
         <%  }); %>
