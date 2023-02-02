@@ -3,29 +3,29 @@
 
 <head>
     <%- include('./partials/head') %>
-    <%- include('./partials/nav') %> 
+    
 </head>
 
 <body>
-
+<%- include('./partials/nav') %>
     <h1>Welcome to Employee Data Entry</h1>
-   <div class="login">
-    <% if (error) { %>
-    <p class="login-error"><%= error %></p>
-    <% } %>
+    <div class="login">
+        <% if (error) { %>
+        <p class="login-error"><%= error %></p>
+        <% } %>
 
-    <form action="/login" method="POST" autocomplete="off" class="form-login" >
-        <label>
-            Email:
-            <input type="email" name="email" required class="input-login">
-        </label>
-        <label>
-            Password:
-            <input type="password" name="password" required class="input-login">
-        </label>
-        <input type="submit" value="Login" class="submit-login">
-    </form>
-</div>
+        <form action="/login" method="POST" autocomplete="off" class="form-login">
+            <label>
+                Email:
+                <input type="email" name="email" required class="input-login">
+            </label>
+            <label>
+                Password:
+                <input type="password" name="password" required class="input-login">
+            </label>
+            <input type="submit" value="Login" class="submit-login">
+        </form>
+    </div>
     <%- include('./partials/footer') %>
 </body>
 

@@ -1,24 +1,27 @@
 <!DOCTYPE html>
 <html lang="en">
 
-<%- include('./partials/head') %>
-<%- include('./partials/nav') %>
+<head>
+    <%- include('./partials/head') %>
+    <%- include('./partials/nav') %>
+</head>
+
 <body>
 
-    <h1>Employee list</h1>
-   
+    <h1>Employee Data Base</h1>
+
     <ul>
         <% employees.forEach(employee => { %>
-        <li>
+        <li class="employee-list">
             <a href="/employees/<%= employee._id %>">
-            <%= employee.firstname %>
-            <%= employee.lastname %>
-      </a>  
-    </li>
+                <%= employee.firstname %>
+                <%= employee.lastname %>
+            </a>
+        </li>
         <%  }); %>
     </ul>
 
-    
+
 
     <%- include('./partials/footer') %>
 </body>

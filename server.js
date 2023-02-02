@@ -29,7 +29,9 @@ db.on('connected', () => {
 
 // Middleware
 
-app.use(express.urlencoded({ extended: false }));
+app.use(express.urlencoded({
+    extended: false
+}));
 app.use(methodOverride('_method'));
 app.use(employeesRouter);
 app.set('view engine', 'ejs');
@@ -42,11 +44,11 @@ app.use(session({
 
 // authentication middleware
 function isAuthenticated(req, res, next) {
-    if(!req.session.userId) {
+    if (!req.session.userId) {
         res.locals.user = null;
         return res.redirect('/login');
     }
-    res.locals.user =req.session.newUser_Id;
+    res.locals.user = req.session.newUser_Id;
     next();
 };
 
