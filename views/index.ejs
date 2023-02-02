@@ -3,17 +3,18 @@
 
 <head>
     <%- include('./partials/head') %>
-    <%- include('./partials/nav') %>
+
 </head>
 
 <body>
-
+    <%- include('./partials/nav') %>
     <h1>Employee Data Base</h1>
 
     <ul>
         <% employees.forEach(employee => { %>
         <li class="employee-list">
             <a href="/employees/<%= employee._id %>">
+                <%= employee.idnumber %> -
                 <%= employee.firstname %>
                 <%= employee.lastname %>
             </a>

@@ -3,10 +3,10 @@
 
 <head>
 <%- include('./partials/head') %>
-<%- include('./partials/nav') %>
 </head>
 
 <body>
+    <%- include('./partials/nav') %>
     <h1>Edit page</h1>
     <form action="/employees/<%=employee._id%>?_method=PUT" method="POST">
         <label>

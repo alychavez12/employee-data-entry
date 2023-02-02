@@ -51,12 +51,14 @@ function isAuthenticated(req, res, next) {
     res.locals.user = req.session.newUser_Id;
     next();
 };
+// CSS
+app.use(express.static('public'));
 
 app.use(userRouter);
 app.use(isAuthenticated, employeesRouter);
 
-// CSS
-app.use(express.static('public'));
+
+
 // Configure data base
 
 
