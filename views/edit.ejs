@@ -2,26 +2,61 @@
 <html lang="en">
 
 <head>
-<%- include('./partials/head') %>
+    <%- include('./partials/head') %>
 </head>
 
 <body>
     <%- include('./partials/nav') %>
-    <h1>Edit page</h1>
-    <form action="/employees/<%=employee._id%>?_method=PUT" method="POST">
-        <label>
-            Id Number: <input type="number" name="idnumber" value="<%=employee.idnumber%>">
-            First Name: <input type="text" name="firstname" value="<%=employee.firstname%>">
-            Last Name: <input type="text" name="lastname" value="<%=employee.lastname%>">
-            D.O.B: <input type="text" name="dob" value="<%=employee.dob%>">
-            Gender: <input type="text" name="gender" value="<%=employee.gender%>">
-            Post Code: <input type="text" name="postcode" value="<%=employee.postcode%>">
-            Phone Number: <input type="text" name="phonenumber" value="<%=employee.phonenumber%>">
-            Email address: <input type="text" name="emailaddress" value="<%=employee.emailaddress%>">
-            Position: <input type="text" name="position" value="<%=employee.position%>">
-        </label>
-        <input type="submit" name="" value="Submit Changes">
-    </form>
+    <h1>Edit <%= employee.firstname %> <%= employee.lastname %> Information</h1>
+    <div style="overflow-x: auto;">
+        <form action="/employees/<%=employee._id%>?_method=PUT" method="POST">
+            <container class="container-new">
+                <table class="table-new">
+                    <tr>
+                        <th>Id Number </th>
+                        <td><input type="number" name="idnumber" value="<%=employee.idnumber%>"></td>
+                    </tr>
+                    <tr>
+                        <th>Name</th>
+                        <td> <input type="text" name="firstname" value="<%=employee.firstname%>"></td>
+                    </tr>
+                    <tr>
+                        <th>Last Name</th>
+                        <td><input type="text" name="lastname" value="<%=employee.lastname%>"></td>
+                    </tr>
+                    <tr>
+                        <th>D.O.B</th>
+                        <td><input type="text" name="dob" value="<%=employee.dob%>"></td>
+                    </tr>
+                    <tr>
+                        <th>Gender </th>
+                        <td><input type="text" name="gender" value="<%=employee.gender%>"></td>
+                    </tr>
+                    <tr>
+                        <th>Post-Code</th>
+                        <td><input type="text" name="postcode" value="<%=employee.postcode%>"></td>
+                    </tr>
+                    <tr>
+                        <th>Phone Number</th>
+                        <td><input type="text" name="phonenumber" value="<%=employee.phonenumber%>"></td>
+                    </tr>
+                    <tr>
+                        <th>Email Address</th>
+                        <td><input type="text" name="emailaddress" value="<%=employee.emailaddress%>"></td>
+                    </tr>
+                    <tr>
+                        <th>Position</th>
+                        <td><input type="text" name="position" value="<%=employee.position%>">
+                    </tr>
+                    <tr>
+                        <th>Action</th>
+                        <td><input type="submit" name="" value="Submit"></td>
+                    </tr>
+
+                </table>
+            </container>
+        </form>
+    </div>
     <%- include('./partials/footer') %>
 </body>
 
