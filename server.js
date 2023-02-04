@@ -32,12 +32,21 @@ db.on('connected', () => {
 app.use(express.urlencoded({
     extended: false
 }));
+
 app.use(methodOverride('_method'));
 app.use(employeesRouter);
 app.set('view engine', 'ejs');
 
+app.use(session({
+    secret: process.env.SECRET,
+    resave: false,
+    saveUninitialized: false,
+    maxAge: 2678400000 //31 days
+}));
+
+// will run for every request 
 app.use((req, res, next) => {
-    if(req.session.userId) {
+    if (req.session.userId) {
         res.locals.user = req.session.userId
     } else {
         res.locals.user = null
@@ -45,17 +54,24 @@ app.use((req, res, next) => {
     next();
 });
 
-
 // authentication middleware
 function isAuthenticated(req, res, next) {
+    console.log(req.session)
     if (!req.session.userId) {
         return res.redirect('/login');
     }
     next();
 };
+
+// home page route
+app.get('/', (req, res) => {
+    res.render('home.ejs', {
+        title: 'main page'
+    });
+});
+
 // CSS
 app.use(express.static('public'));
-
 app.use(userRouter);
 app.use(isAuthenticated, employeesRouter);
 

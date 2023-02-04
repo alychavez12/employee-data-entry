@@ -1,5 +1,8 @@
 <nav>
+    
     <ul class="nav-ul">
+       
+        <% if(user) { %>
 
         <li class="nav-list">
             <a class="li-a" href="/">Home</a>
@@ -13,6 +16,7 @@
         <li class="nav-list">
             <a class="li-a" href="/logout">Logout</a>
         </li>
+        <% } else { %>
 
         <li class="nav-list">
             <a class="li-a" href="/signup">Sign Up</a>
@@ -21,6 +25,6 @@
             <a class="li-a" href="/login">Login</a>
         </li>
 
-
+        <% } %>
     </ul>
 </nav>
