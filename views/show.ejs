@@ -8,41 +8,42 @@
 
 <body>
     <%- include('./partials/nav') %>
-<container class="container">
-    <h1><%= employee.firstname %> <%= employee.lastname %></h1>
-    <table class="table">
-        <tr>
-            <th>Id Number </th>
-            <th>D.O.B</th>
-            <th>Gender </th>
-            <th>Post-Code</th>
-            <th>Phone Number</th>
-            <th>Email Address</th>
-            <th>Position</th>
-            <th>Action</th>
-        </tr>
-   
-    <tbody>
-        <tr>
-            <td><%= employee.idnumber %></td>
-            <td> <%= employee.dob %></td>
-            <td><%= employee.gender%></td>
-            <td> <%= employee.postcode%></td>
-            <td> <%= employee.phonenumber%></td>
-            <td> <%= employee.emailaddress%></td>
-            <td> <%= employee.position%></td>
-            <td> <a href="/employees/<%=employee._id %>/edit" class="edit" >
-             <button class="edit" >Edit</button>   
-            </a>
-                <form action="/employees/<%=employee._id %>/?_method=DELETE" method="POST">
-                    <input type="submit" value="Delete" class="delete">
-                </form>
-            </td>
-        </tr>
-    </tbody>
- </table>
-</container>
-
+    <div style="overflow-x: auto;">
+        <container class="container">
+            
+            <h1><%= employee.firstname %> <%= employee.lastname %></h1>
+            <table class="table">
+                <tr>
+                    <th>Id Number </th>
+                    <th>D.O.B</th>
+                    <th>Gender </th>
+                    <th>Post-Code</th>
+                    <th>Phone Number</th>
+                    <th>Email Address</th>
+                    <th>Position</th>
+                    <th>Action</th>
+                </tr>
+                <tbody>
+                    <tr>
+                        <td><%= employee.idnumber %></td>
+                        <td> <%= employee.dob %></td>
+                        <td><%= employee.gender%></td>
+                        <td> <%= employee.postcode%></td>
+                        <td> <%= employee.phonenumber%></td>
+                        <td> <%= employee.emailaddress%></td>
+                        <td> <%= employee.position%></td>
+                        <td> <a href="/employees/<%=employee._id %>/edit" class="edit">
+                                <button class="edit">Edit</button>
+                            </a>
+                            <form action="/employees/<%=employee._id %>/?_method=DELETE" method="POST">
+                                <input type="submit" value="Delete" class="delete">
+                            </form>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </container>
+    </div>
 
     <%- include('./partials/footer') %>
 </body>
