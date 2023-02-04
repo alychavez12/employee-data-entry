@@ -35,20 +35,22 @@ app.use(express.urlencoded({
 app.use(methodOverride('_method'));
 app.use(employeesRouter);
 app.set('view engine', 'ejs');
-app.use(session({
-    secret: process.env.SECRET,
-    resave: false,
-    saveUninitialized: false,
-    maxAge: 2678400000 //31 days
-}));
+
+app.use((req, res, next) => {
+    if(req.session.userId) {
+        res.locals.user = req.session.userId
+    } else {
+        res.locals.user = null
+    }
+    next();
+});
+
 
 // authentication middleware
 function isAuthenticated(req, res, next) {
     if (!req.session.userId) {
-        res.locals.user = null;
         return res.redirect('/login');
     }
-    res.locals.user = req.session.newUser_Id;
     next();
 };
 // CSS
