@@ -34,7 +34,6 @@ app.use(express.urlencoded({
 }));
 
 app.use(methodOverride('_method'));
-app.use(employeesRouter);
 app.set('view engine', 'ejs');
 
 app.use(session({
