@@ -11,7 +11,7 @@ Employee Data Entry is a CRUD website where you can add your employee data.
 * HTML
 * CSS
 * Heroku
-* JavaScript
+* Ejs
 * Express
 * Node Js
 
@@ -21,7 +21,7 @@ Employee Data Entry is a CRUD website where you can add your employee data.
 
 ## Deployment with Heroku
 
-# https://employees-data-entry.herokuapp.com/
+* https://employees-data-entry.herokuapp.com/
 
 ## Authors
 
