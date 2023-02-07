@@ -54,14 +54,38 @@ const employeeSchema = new Schema({
 });
 
 
-// capitalize the first letter of name and last name
+// capitalize the first letter of 
 employeeSchema.pre('save', function (next) {
-  const words = this.firstname.split(' ')
+  let words = this.firstname.split(' ')
   this.firstname = words
     .map((w) => w.charAt(0).toUpperCase() + w.slice(1).toLowerCase())
     .join(' ')
   next()
-})
+});
+
+employeeSchema.pre('save', function (next) {
+  let words = this.lastname.split(' ')
+  this.lastname = words
+    .map((w) => w.charAt(0).toUpperCase() + w.slice(1).toLowerCase())
+    .join(' ')
+  next()
+});
+
+employeeSchema.pre('save', function (next) {
+  let words = this.gender.split(' ')
+  this.gender = words
+    .map((w) => w.charAt(0).toUpperCase() + w.slice(1).toLowerCase())
+    .join(' ')
+  next()
+});
+
+employeeSchema.pre('save', function (next) {
+  let words = this.position.split(' ')
+  this.position = words
+    .map((w) => w.charAt(0).toUpperCase() + w.slice(1).toLowerCase())
+    .join(' ')
+  next()
+});
 
 
 module.exports = mongoose.model('Employee', employeeSchema);
