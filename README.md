@@ -12,8 +12,13 @@ Employee Data Entry is a CRUD website where you can add your employee data.
 * CSS
 * Heroku
 * Ejs
-* Express
-* Node Js
+* Express.js
+* Node.js
+* jQuery
+* Mongoose
+* MongoDB
+* JavaScript
+* Basic Authentication
 
 ## Image
 
